@@ -4,79 +4,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Search App</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <title>Search Movies & Popular Web Series - Disney+ Hotstar</title>
     <!-- favicon -->
+<link rel="shortcut icon" href="./favicon/android-chrome-192x192.png" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon/apple-touch-icon.png" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon/favicon-16x16.png" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon/favicon-32x32.png" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
 
-    <link rel="shortcut icon" href="./redketchup/android-chrome-192x192.png" type="image/x-icon">
-    <link rel="shortcut icon" href="./redketchup/android-chrome-512x512.png" type="image/x-icon">
-    <link rel="shortcut icon" href="./redketchup/apple-touch-icon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="./redketchup/favicon-16x16.png" type="image/x-icon">
-    <link rel="shortcut icon" href="./redketchup/favicon-32x32.png" type="image/x-icon">
-    <link rel="shortcut icon" href="./redketchup/favicon.ico" type="image/x-icon">
-    
-    <!-- styles -->
+<!-- style -->
+<link rel="stylesheet" href="./style.css">
 
-    <link rel="stylesheet" href="./style.css">
+<!-- fontawsome -->
+<script src="https://kit.fontawesome.com/b832c13233.js" crossorigin="anonymous"></script>
 </head>
-<body id="body">
-    <!-- search page -->
-    <section id="search-page">
-        <h2 id="logo">OMDB Movie Search App</h2>
-        <div>
-            <p id="search-box">Search Your Favourite Movies 👇</p>
-            <form action="" id="form">
-                <input type="text" id="search" placeholder="i.e. Avengers">
-                <button id="btn" type="button">Search</button>
-            </form>
-        </div>
-    </section>
-    <!-- end of search page -->
+<body>
 
-    <!-- result page -->
-    <section id="search-result">
-        <div id="movie-name">
-            <button type="button" id="back-icon" onclick={handleBack()}>
-                <i class="fa fa-arrow-left"></i>
-            </button>
-            <h2 id="search-title">Movie Title</h2>
-        </div>
-        <div id="results">
-            
-        </div>
-    </section>
-    <!-- end of result page -->
+     <!-- navbar -->
+     <nav>
+        <ul>
+            <li class="brand"><a href="./index.html"><img src="./hotstar-vip-vs-hotstar-premium-which-one-to-pick2-1618046969.jpg" alt="Hotstar"></a></li>
+            <li>TV</li>
+            <li>Movies</li>
+            <li>Sports</li>
+            <li>Disney+</li>
+            <li class="kids">KIDS</li>
+            <input type="text" name="search" placeholder="Search" id="find">
+            <button type="submit" class="searchButton" onclick="submit()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <li>Login</li>
+        </ul>
+    </nav>
 
-      <!-- offline message,no result page -->
-      <section id="offline-page">
-        <div id="message-box">
-            <p id="message">You are not connected to the internet</p>
-            <button type="button" id="back" onclick={handleBack()}>Back</button>
-        </div>
-    </section>
+    <div id="slideshow">
+        <!--Show Slideshow here-->
 
-    <!-- end of offline message page -->
+    </div>
 
-    <!-- details page -->
-    <section id="details-page">
-        <div id="card">
-            <button id="close" onclick={handleClose()}>
-                <i class="fa fa-times"></i>
-            </button>
-            <div id="card-body">
-                <p id="card-name">Movie Name</p>
-                <img src="/avengers_poster.jpg" alt="" id="card-img">
-                <p id="card-title"><strong>Title : </strong><span id="title">Avengers</span></p>
-                <p id="card-rating"><strong>IMDB Rating : </strong><span id="rating">8.3⭐</span></p>
-                <p id="card-language"><strong>Language : </strong><span id="language">English</span></p>
-                <p id="card-date"><strong>Release Date : </strong><span id="date">2014-04-12</span></p>
-                <p id="card-description"><strong>Description  : </strong><span id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem soluta earum architecto esse atque alias eveniet optio illum! Atque commodi similique fugit! Molestiae, quam illo.</span></p>
-            </div>
+
+    
+    <div id="search_heading">Your Search Results 👇 <a href="./index.html"><button id="clear_btn">Clear Search</button></a></div>
+
+    <div id="movie">
+
+    </div>
+
+
+    <div class="label">Latest & Trending</div>
+    <div id="latest">
+        <!-- latest&trending -->
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2181/1122181-v-0fa7b5e161de" alt="Rudra">
         </div>
-    </section>
-    <!-- end of details page -->
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/4622/1114622-v-6aa53dbe426f" alt="A Thursday">
+        </div>
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1919/1111919-v-f73a6f4d8b98" alt="Snow Drop">
+        </div>
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9892/1109892-v-c67c0eb31f8b" alt="Indian Murder">
+        </div>
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6716/1106716-v-a0a306c60795" alt="Tadap">
+        </div>
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1841/1101841-v-72cc4409eaed" alt="Human">
+        </div>
+
+    </div>
+
+    <div class="label">Top-Rated Content Of The Year</div>
+
+    <div id="latest">
+        <!-- latest&trending -->
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2069/1062069-v-f34508e5a405" alt="shiddat">
+        </div>
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1691/1011691-v-657881703c09" alt="loki">
+        </div>
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/3950/1083950-v-bed25154b64e" alt="Db">
+        </div>
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/5054/1025054-v-4571c2e9fa14" alt="gharan">
+        </div>
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9263/1089263-v-13f4d7e9411b" alt="Aarya 2">
+        </div>
+        <div class="ist">
+            <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/4719/994719-v" alt="Nov. Story">
+        </div>
+
+    </div>
+
+
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/search.js"></script>    
 </body>
 </html>
-<script src="./index.js"></script>
